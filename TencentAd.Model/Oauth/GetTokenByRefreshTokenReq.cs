@@ -4,6 +4,11 @@ namespace TencentAd.Model.Oauth
 {
     public class GetTokenByRefreshTokenReq : TencentAdRequest
     {
+        public GetTokenByRefreshTokenReq(string refreshToken)
+        {
+            refresh_token = refreshToken;
+        }
+
         public string grant_type { get; } = "refresh_token";
 
         /// <summary>

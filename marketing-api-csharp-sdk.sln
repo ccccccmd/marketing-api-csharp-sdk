@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd", "TencentAd\Tenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd.Examples", "TencentAd.Examples\TencentAd.Examples.csproj", "{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd.Tests", "TencentAd.Tests\TencentAd.Tests.csproj", "{8AD0D261-D30C-46C7-8787-438B249ACA1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD0D261-D30C-46C7-8787-438B249ACA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD0D261-D30C-46C7-8787-438B249ACA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD0D261-D30C-46C7-8787-438B249ACA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD0D261-D30C-46C7-8787-438B249ACA1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

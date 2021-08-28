@@ -12,7 +12,10 @@ namespace TencentAd.Examples
         {
             Console.WriteLine("Hello World!");
 
-            TencentAdContext.Init(true, true, null);
+            long clientId = 1;
+            var clientSecret = "xxx";
+
+            TencentAdContext.Init(new TencentAdConfig(clientId, clientSecret), true, true, null);
 
 
             const long accountId = 1318;

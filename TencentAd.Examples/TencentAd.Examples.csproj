@@ -6,7 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TencentAd\TencentAd.csproj" />
+        <ProjectReference Include="..\TencentAd\TencentAd.csproj"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0"/>
     </ItemGroup>
 
 </Project>

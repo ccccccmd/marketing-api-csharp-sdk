@@ -4,6 +4,12 @@ namespace TencentAd.Model.Oauth
 {
     public class GetTokenByCodeReq : TencentAdRequest
     {
+        public GetTokenByCodeReq(string authorizationCode, string redirectUri)
+        {
+            authorization_code = authorizationCode;
+            redirect_uri = redirectUri;
+        }
+
         public string grant_type { get; } = "authorization_code";
 
         /// <summary>

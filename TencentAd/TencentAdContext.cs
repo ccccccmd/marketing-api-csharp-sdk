@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Flurl.Http;
+using Flurl.Http.Configuration;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace TencentAd
 {
@@ -10,18 +14,22 @@ namespace TencentAd
         private const string SandBoxApi = "https://sandbox-api.e.qq.com/v1.3";
         private const string ProdApi = "https://api.e.qq.com/v1.3";
 
-        public static string BasePath { get; private set; } = "https://sandbox-api.e.qq.com/v1.3";
+        private static string _basePath;
+        public static string BasePath => _basePath;
 
+
+        private static TencentAdConfig _config;
+
+
+        public static TencentAdConfig ClientConfig => _config;
 
         /// <summary>
         ///     Init
         /// </summary>
-        /// <param name="useSandBox"></param>
-        /// <param name="debug"></param>
-        /// <param name="timeout"></param>
-        public static void Init(bool useSandBox, bool debug, TimeSpan? timeout)
+        public static void Init(TencentAdConfig config, bool useSandBox, bool debug, TimeSpan? timeout)
         {
-            BasePath = useSandBox ? SandBoxApi : ProdApi;
+            _config = config;
+            _basePath = useSandBox ? SandBoxApi : ProdApi;
 
             FlurlHttp.Configure(settings =>
             {
@@ -29,6 +37,11 @@ namespace TencentAd
                 {
                     settings.Timeout = timeout;
                 }
+
+                settings.JsonSerializer = new NewtonsoftJsonSerializer(new JsonSerializerSettings
+                {
+                    Converters = new List<JsonConverter> {new StringEnumConverter()}
+                });
 
                 if (!debug) return;
                 settings.BeforeCallAsync = call =>

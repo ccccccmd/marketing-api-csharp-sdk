@@ -16,5 +16,16 @@ namespace TencentAd.Api
         {
             return TencentAdBaseApi.PostAsync<LeadCluesGetRes>("/lead_clues/get", req, accessToken, fields);
         }
+
+        /// <summary>
+        ///     外部线索数据导入
+        /// </summary>
+        /// <param name="req"></param>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
+        public Task<OuterCluesAddRes> OuterCluesAdd(OuterCluesAddReq req, string accessToken)
+        {
+            return TencentAdBaseApi.PostAsync<OuterCluesAddRes>("/outer_clues/add", req, accessToken);
+        }
     }
 }
