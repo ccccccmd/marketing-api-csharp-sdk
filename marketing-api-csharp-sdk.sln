@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd.Model", "TencentAd.Model\TencentAd.Model.csproj", "{17871ECB-A9A0-45FA-A41A-8EDF649C4188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd", "TencentAd\TencentAd.csproj", "{CCA45826-5361-4AB7-AF16-D8F1268E9656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentAd.Examples", "TencentAd.Examples\TencentAd.Examples.csproj", "{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17871ECB-A9A0-45FA-A41A-8EDF649C4188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17871ECB-A9A0-45FA-A41A-8EDF649C4188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17871ECB-A9A0-45FA-A41A-8EDF649C4188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17871ECB-A9A0-45FA-A41A-8EDF649C4188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA45826-5361-4AB7-AF16-D8F1268E9656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA45826-5361-4AB7-AF16-D8F1268E9656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA45826-5361-4AB7-AF16-D8F1268E9656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA45826-5361-4AB7-AF16-D8F1268E9656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C73EDD-7E0C-4AC8-9443-1F6665264FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
