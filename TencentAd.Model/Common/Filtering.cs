@@ -17,6 +17,6 @@ namespace TencentAd.Model.Common
         /// <summary>
         ///     操作符
         /// </summary>
-        public OperatorEnum @operator { get; set; }
+        public operator_type @operator { get; set; }
     }
 }

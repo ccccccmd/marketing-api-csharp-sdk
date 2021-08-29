@@ -35,10 +35,10 @@ namespace TencentAd.Tests
             var res = await _api.OuterCluesAdd(
                 new OuterCluesAddReq(AccountId, new[]
                 {
-                    new OuterLeadsInfoAddInput(id, LeadsTypeEnum.LEADS_TYPE_FORM)
+                    new OuterLeadsInfoAddInput(id, lead_clues_leads_type.LEADS_TYPE_FORM)
                     {
-                        leads_name = $"leadsname_{id}", leads_gender = LeadsGenderTypeEnum.GENDER_TYPE_MALE,
-                        leads_user_type = LeadsUserTypeEnum.USER_TYPE_TEL,
+                        leads_name = $"leadsname_{id}", leads_gender = lead_clues_gender_type.GENDER_TYPE_MALE,
+                        leads_user_type = leads_user_type.USER_TYPE_TEL,
                         leads_tel = "13188888888"
                     }
                 })

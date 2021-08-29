@@ -2,6 +2,9 @@
 
 namespace TencentAd.Model.AdsInsight
 {
+    /// <summary>
+    ///     获取线索列表
+    /// </summary>
     public class LeadCluesGetReq : TencentAdRequest
     {
         public LeadCluesGetReq(long accountId, TimeRange timeRange)

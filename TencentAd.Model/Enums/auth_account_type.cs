@@ -1,6 +1,10 @@
 ﻿namespace TencentAd.Model.Enums
 {
-    public enum AccountTypeEnum
+    /// <summary>
+    ///     账号类型
+    ///     https://developers.e.qq.com/docs/reference/enum?version=1.1#auth_account_type
+    /// </summary>
+    public enum auth_account_type
     {
         /// <summary>
         ///     微信账号

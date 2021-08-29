@@ -3,7 +3,7 @@
     /// <summary>
     ///     操作符
     /// </summary>
-    public enum OperatorEnum
+    public enum operator_type
     {
         EQUALS, //等于
         CONTAINS, // 模糊匹配

@@ -29,7 +29,7 @@ namespace TencentAd.Model.Oauth
 
         public string scope { get; set; }
 
-        public AccountTypeEnum account_type { get; set; } = AccountTypeEnum.ACCOUNT_TYPE_QQ;
+        public auth_account_type account_type { get; set; } = auth_account_type.ACCOUNT_TYPE_QQ;
 
         /// <summary>
         ///     权页面展示账号类型(QQ 账号/微信账号)数量，当取值为 1 时授权页面仅展示 account_type 指定的账号类型，当取值为 2 时授权页面展示所有账号类型授权页面，默认优先显示 account_type

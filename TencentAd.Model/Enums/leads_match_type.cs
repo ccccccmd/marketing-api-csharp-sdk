@@ -2,8 +2,9 @@
 {
     /// <summary>
     ///     线索匹配类型
+    ///     https://developers.e.qq.com/docs/reference/enum?version=1.1#leads_match_type
     /// </summary>
-    public enum MatchTypeEnum
+    public enum leads_match_type
     {
         /// <summary>
         ///     无，不需要与线索平台已有线索匹配

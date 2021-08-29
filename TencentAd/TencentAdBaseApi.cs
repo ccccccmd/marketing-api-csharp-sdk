@@ -33,6 +33,54 @@ namespace TencentAd
             throw new TencentAdsResponseException(result.code, result.message, result.message_cn, result.errors);
         }
 
+
+        public static async Task PostAsync(string subPath, object req, string accessToken,
+            string[] fields = null)
+        {
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                throw new TencentAdsException("AccessToken Can Not Be Null");
+            }
+
+            var result = await $"{TencentAdContext.BasePath}{subPath}"
+                .WithHeader("charset", "utf-8")
+                .SetQueryParams(new BasicTencentAdRequest(accessToken, fields))
+                .PostJsonAsync(req)
+                .ReceiveJson<TencentAdResponse>();
+
+
+            if (result.success)
+            {
+                return;
+            }
+
+            throw new TencentAdsResponseException(result.code, result.message, result.message_cn, result.errors);
+        }
+
+
+        public static async Task GetAsync(string subPath, object req, string accessToken,
+            string[] fields = null)
+        {
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                throw new TencentAdsException("AccessToken Can Not Be Null");
+            }
+
+            using var response = await $"{TencentAdContext.BasePath}{subPath}"
+                .WithHeaders(new {charset = "utf-8", Content_Type = "application/json"})
+                .SetQueryParams(new BasicTencentAdRequest(accessToken, fields))
+                .SetQueryParams(req)
+                .GetAsync();
+            var result = await response.GetJsonAsync<TencentAdResponse>();
+
+            if (result.success)
+            {
+                return;
+            }
+
+            throw new TencentAdsResponseException(result.code, result.message, result.message_cn, result.errors);
+        }
+
         public static async Task<TRes> GetAsync<TRes>(string subPath, object req, string accessToken,
             string[] fields = null)
         {

@@ -7,6 +7,7 @@ namespace TencentAd.Api
     {
         /// <summary>
         ///     获取线索列表
+        ///     https://developers.e.qq.com/docs/api/insights/leads/lead_clues_get?version=1.1
         /// </summary>
         /// <param name="req"></param>
         /// <param name="accessToken">授权令牌</param>
@@ -19,6 +20,7 @@ namespace TencentAd.Api
 
         /// <summary>
         ///     外部线索数据导入
+        ///     https://developers.e.qq.com/docs/api/insights/leads/outer_clues_add?version=1.1
         /// </summary>
         /// <param name="req"></param>
         /// <param name="accessToken"></param>

@@ -97,7 +97,7 @@ namespace TencentAd.Model.AdsInsight
         /// <summary>
         ///     线索类型
         /// </summary>
-        public LeadsTypeEnum? leads_type { get; set; }
+        public lead_clues_leads_type? leads_type { get; set; }
 
         /// <summary>
         ///     线索来源
@@ -137,7 +137,7 @@ namespace TencentAd.Model.AdsInsight
         /// <summary>
         ///     线索用户类型
         /// </summary>
-        public LeadsUserTypeEnum? leads_user_type { get; set; }
+        public leads_user_type? leads_user_type { get; set; }
 
         /// <summary>
         ///     线索用户的微信 AppId，微信公众号/小程序/小游戏的开发者 id
@@ -182,7 +182,7 @@ namespace TencentAd.Model.AdsInsight
         /// <summary>
         ///     性别
         /// </summary>
-        public LeadsGenderTypeEnum? leads_gender { get; set; }
+        public lead_clues_gender_type? leads_gender { get; set; }
 
         /// <summary>
         ///     国籍

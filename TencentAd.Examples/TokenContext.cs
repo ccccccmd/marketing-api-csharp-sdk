@@ -12,7 +12,7 @@ namespace TencentAd
         Task<string> AccessToken(long accountId);
 
         /// <summary>
-        /// 授权成功后调用
+        ///     授权成功后调用
         /// </summary>
         /// <param name="req"></param>
         /// <returns></returns>

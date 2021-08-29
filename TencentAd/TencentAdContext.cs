@@ -14,22 +14,19 @@ namespace TencentAd
         private const string SandBoxApi = "https://sandbox-api.e.qq.com/v1.3";
         private const string ProdApi = "https://api.e.qq.com/v1.3";
 
-        private static string _basePath;
-        public static string BasePath => _basePath;
+
+        public static string BasePath { get; private set; }
 
 
-        private static TencentAdConfig _config;
-
-
-        public static TencentAdConfig ClientConfig => _config;
+        public static TencentAdConfig ClientConfig { get; private set; }
 
         /// <summary>
         ///     Init
         /// </summary>
         public static void Init(TencentAdConfig config, bool useSandBox, bool debug, TimeSpan? timeout)
         {
-            _config = config;
-            _basePath = useSandBox ? SandBoxApi : ProdApi;
+            ClientConfig = config;
+            BasePath = useSandBox ? SandBoxApi : ProdApi;
 
             FlurlHttp.Configure(settings =>
             {
@@ -63,6 +60,7 @@ namespace TencentAd
                     Debug.WriteLine(
                         $"ResponseContent:{await call.Response.ResponseMessage.Content.ReadAsStringAsync()}");
                 };
+                
             });
         }
     }

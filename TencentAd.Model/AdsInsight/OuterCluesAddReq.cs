@@ -18,14 +18,14 @@ namespace TencentAd.Model.AdsInsight
         /// <summary>
         ///     线索匹配类型，不填认为是 NONE
         /// </summary>
-        public MatchTypeEnum match_type { get; set; } = MatchTypeEnum.NONE;
+        public leads_match_type match_type { get; set; } = leads_match_type.NONE;
 
         public OuterLeadsInfoAddInput[] leads_info_list { get; set; }
     }
 
     public class OuterLeadsInfoAddInput
     {
-        public OuterLeadsInfoAddInput(string outerLeadsId, LeadsTypeEnum leadsType)
+        public OuterLeadsInfoAddInput(string outerLeadsId, lead_clues_leads_type leadsType)
         {
             outer_leads_id = outerLeadsId;
             leads_type = leadsType;
@@ -65,7 +65,7 @@ namespace TencentAd.Model.AdsInsight
         ///     线索类型
         /// </summary>
 
-        public LeadsTypeEnum leads_type { get; set; }
+        public lead_clues_leads_type leads_type { get; set; }
 
         /// <summary>
         ///     线索用户 id
@@ -76,7 +76,7 @@ namespace TencentAd.Model.AdsInsight
         ///     线索用户类型，线索用户 id 有值时必填
         /// </summary>
 
-        public LeadsUserTypeEnum? leads_user_type { get; set; }
+        public leads_user_type? leads_user_type { get; set; }
 
         /// <summary>
         ///     线索用户的微信 AppId（微信公众号/小程序/小游戏的开发者 id）
@@ -92,7 +92,7 @@ namespace TencentAd.Model.AdsInsight
         ///     性别
         /// </summary>
 
-        public LeadsGenderTypeEnum? leads_gender { get; set; }
+        public lead_clues_gender_type? leads_gender { get; set; }
 
         /// <summary>
         ///     邮箱
