@@ -3,10 +3,8 @@ using TencentAd.Model.UserData;
 
 namespace TencentAd.Api
 {
-    
-    
     /// <summary>
-    /// 数据上报
+    ///     数据上报
     /// </summary>
     public class UserDataApi
     {

@@ -14,7 +14,7 @@ namespace TencentAd.Tests
 
         public AdsInsightApiTest()
         {
-            _api = new AdsInsightApi();
+            _api = new TencentAdApi().Insight;
         }
 
         [Fact]

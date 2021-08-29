@@ -60,7 +60,6 @@ namespace TencentAd
                     Debug.WriteLine(
                         $"ResponseContent:{await call.Response.ResponseMessage.Content.ReadAsStringAsync()}");
                 };
-                
             });
         }
     }
