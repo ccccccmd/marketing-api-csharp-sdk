@@ -100,7 +100,7 @@ namespace TencentAd.Model.UserData
         /// <summary>
         ///     商品信息
         /// </summary>
-        public UserActionsAdd_ProductInform? product_inform { get; set; }
+        public UserActionsAdd_ProductInform product_inform { get; set; }
 
         /// <summary>
         ///     渠道信息，标识该条行为发生在何渠道上
