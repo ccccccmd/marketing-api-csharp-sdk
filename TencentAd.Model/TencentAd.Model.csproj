@@ -2,6 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <PackageVersion>0.0.1</PackageVersion>
+        <RepositoryUrl>https://github.com/ccccccmd/marketing-api-csharp-sdk</RepositoryUrl>
+        <Title>marketing-api-csharp-sdk.model</Title>
+        <Description></Description>
+        <PackageId>marketing-api-csharp-sdk.model</PackageId>
+        <Authors />
     </PropertyGroup>
 
     <ItemGroup>
