@@ -1,3 +1,5 @@
+using System;
+
 namespace TencentAd.Model.Common
 {
     public class TimeRange
@@ -6,6 +8,12 @@ namespace TencentAd.Model.Common
         {
             start_time = startTime;
             end_time = endTime;
+        }
+
+        public TimeRange(DateTime startTime, DateTime endTime)
+        {
+            start_time = startTime.ToUnixTimeSeconds();
+            end_time = endTime.ToUnixTimeSeconds();
         }
 
         /// <summary>

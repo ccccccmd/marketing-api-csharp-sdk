@@ -11,6 +11,8 @@ namespace TencentAd.Api
     {
         private readonly TencentAdConfig _config;
 
+        private static string _api = "https://api.e.qq.com/oauth/token";
+
         public OAuthApi(TencentAdConfig config)
         {
             _config = config;
@@ -27,9 +29,7 @@ namespace TencentAd.Api
 
         private async Task<TokenInfoRes> Query(object queryParams)
         {
-            var api = $"{TencentAdContext.BasePath}/oauth/token";
-
-            var result = await api.SetQueryParams(queryParams).GetJsonAsync<TencentAdResponse<TokenInfoRes>>();
+            var result = await _api.SetQueryParams(queryParams).GetJsonAsync<TencentAdResponse<TokenInfoRes>>();
             if (result.success)
             {
                 return result.data;

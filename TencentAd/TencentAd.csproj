@@ -10,16 +10,20 @@
         <Authors>403</Authors>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\TencentAd.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\TencentAd.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\TencentAd.Model\TencentAd.Model.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Flurl.Http" Version="3.2.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Model" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using Flurl.Http;
 using Flurl.Http.Configuration;
@@ -43,21 +42,21 @@ namespace TencentAd
                 if (!debug) return;
                 settings.BeforeCallAsync = call =>
                 {
-                    Debug.WriteLine("====BeforeCall====");
-                    Debug.WriteLine($"StartedUtc:{call.StartedUtc}");
-                    Debug.WriteLine($"URL:{call.Request.Url}");
-                    Debug.WriteLine($"Headers:{call.Request.Headers}");
-                    Debug.WriteLine($"RequestBody:{call.RequestBody}");
+                    Console.WriteLine("====BeforeCall====");
+                    Console.WriteLine($"StartedUtc:{DateTime.UtcNow}");
+                    Console.WriteLine($"URL:{call.Request.Url}");
+                    Console.WriteLine($"Headers:{call.Request.Headers}");
+                    Console.WriteLine($"RequestBody:{call.RequestBody}");
                     return Task.CompletedTask;
                 };
 
                 settings.AfterCallAsync = async call =>
                 {
-                    Debug.WriteLine("====AfterCall====");
-                    Debug.WriteLine($"EndedUtc:{call.EndedUtc}");
-                    Debug.WriteLine($"ResponseMessage:{call.Response.ResponseMessage}");
+                    Console.WriteLine("====AfterCall====");
+                    Console.WriteLine($"EndedUtc:{call.EndedUtc}");
+                    Console.WriteLine($"ResponseMessage:{call.Response.ResponseMessage}");
 
-                    Debug.WriteLine(
+                    Console.WriteLine(
                         $"ResponseContent:{await call.Response.ResponseMessage.Content.ReadAsStringAsync()}");
                 };
             });

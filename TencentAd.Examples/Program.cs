@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using TencentAd.Model;
 using TencentAd.Model.AdsInsight;
 using TencentAd.Model.Common;
 
