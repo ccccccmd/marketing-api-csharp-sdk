@@ -5,9 +5,17 @@
         <PackageVersion>0.0.1</PackageVersion>
         <RepositoryUrl>https://github.com/ccccccmd/marketing-api-csharp-sdk</RepositoryUrl>
         <Title>marketing-api-csharp-sdk.model</Title>
-        <Description></Description>
+        <Description>腾讯广告 Marketing API SDK</Description>
         <PackageId>marketing-api-csharp-sdk.model</PackageId>
-        <Authors />
+        <Authors>403</Authors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\TencentAd.Model.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\TencentAd.Model.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

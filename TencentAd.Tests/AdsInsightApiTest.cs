@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using TencentAd.Api;
+using TencentAd.Model;
 using TencentAd.Model.AdsInsight;
 using TencentAd.Model.Common;
 using TencentAd.Model.Enums;

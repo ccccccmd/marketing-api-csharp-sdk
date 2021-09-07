@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TencentAd
+namespace TencentAd.Model
 {
     public static class DateTimeExtensions
     {
