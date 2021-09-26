@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TencentAd.Api;
 using TencentAd.Model;
 using TencentAd.Model.AdsInsight;
@@ -23,7 +25,7 @@ namespace TencentAd.Tests
         {
             var res = await _api.GetLeadClues(
                 new LeadCluesGetReq(AccountId,
-                    new TimeRange(DateTime.Now.AddDays(-10).ToUnixTimeSeconds(), DateTime.Now.ToUnixTimeSeconds()))
+                    new TimeRange(DateTime.Now.AddMinutes(-3).ToUnixTimeSeconds(), DateTime.Now.ToUnixTimeSeconds()))
                 , AccessToken, null);
 
             Assert.NotNull(res.page_info);
@@ -40,7 +42,12 @@ namespace TencentAd.Tests
                     {
                         leads_name = $"leadsname_{id}", leads_gender = lead_clues_gender_type.GENDER_TYPE_MALE,
                         leads_user_type = leads_user_type.USER_TYPE_TEL,
-                        leads_tel = "13188888888"
+                        leads_tel = "188xxxx3xxx", bundle = JsonConvert.SerializeObject(
+                            new Dictionary<string, string>
+                            {
+                                {"shop_name", "上海大丸百货"},
+                                {"gender", "男"}
+                            })
                     }
                 })
                 , AccessToken);

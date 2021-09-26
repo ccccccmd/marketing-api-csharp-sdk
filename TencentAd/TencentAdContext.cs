@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Flurl.Http;
 using Flurl.Http.Configuration;
@@ -45,8 +46,10 @@ namespace TencentAd
                     Console.WriteLine("====BeforeCall====");
                     Console.WriteLine($"StartedUtc:{DateTime.UtcNow}");
                     Console.WriteLine($"URL:{call.Request.Url}");
-                    Console.WriteLine($"Headers:{call.Request.Headers}");
+                    Console.WriteLine(
+                        $"Headers:{JsonConvert.SerializeObject(call.Request.Headers.Select(x => $"{x.Name}:{x.Value}"))}");
                     Console.WriteLine($"RequestBody:{call.RequestBody}");
+                    Console.WriteLine("====BeforeEnd====");
                     return Task.CompletedTask;
                 };
 
@@ -55,9 +58,11 @@ namespace TencentAd
                     Console.WriteLine("====AfterCall====");
                     Console.WriteLine($"EndedUtc:{call.EndedUtc}");
                     Console.WriteLine($"ResponseMessage:{call.Response.ResponseMessage}");
-
+                    Console.WriteLine(
+                        $"ResponseHeaders:{JsonConvert.SerializeObject(call.Response.Headers.Select(x => $"{x.Name}:{x.Value}"))}");
                     Console.WriteLine(
                         $"ResponseContent:{await call.Response.ResponseMessage.Content.ReadAsStringAsync()}");
+                    Console.WriteLine("====AfterCallEnd====");
                 };
             });
         }

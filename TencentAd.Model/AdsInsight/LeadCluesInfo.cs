@@ -227,6 +227,7 @@ namespace TencentAd.Model.AdsInsight
         /// <summary>
         ///     线索入库时间，表示录入线索管理平台时间。
         /// </summary>
+
         public string leads_create_time { get; set; }
 
         /// <summary>
