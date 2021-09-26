@@ -29,5 +29,20 @@ namespace TencentAd.Api
         {
             return TencentAdBaseApi.PostAsync<OuterCluesAddRes>("/outer_clues/add", req, accessToken);
         }
+
+
+        /// <summary>
+        /// 获取微信广告关注信息
+        /// https://developers.e.qq.com/docs/api/insights/wechat_ad_followers/wechat_ad_followers_get?version=1.3
+        /// </summary>
+        /// <param name="req"></param>
+        /// <param name="accessToken"></param>
+        /// <param name="fields"></param>
+        /// <returns></returns>
+        public Task<WechatAdFollowersRes> WechatAdFollowersGet(WechatAdFollowersReq req, string accessToken,
+            string[] fields)
+        {
+            return TencentAdBaseApi.GetAsync<WechatAdFollowersRes>("/wechat_ad_followers/get", req, accessToken, fields);
+        }
     }
 }
