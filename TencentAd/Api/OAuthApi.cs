@@ -9,9 +9,8 @@ namespace TencentAd.Api
 {
     public class OAuthApi
     {
+        private static readonly string _api = "https://api.e.qq.com/oauth/token";
         private readonly TencentAdConfig _config;
-
-        private static string _api = "https://api.e.qq.com/oauth/token";
 
         public OAuthApi(TencentAdConfig config)
         {

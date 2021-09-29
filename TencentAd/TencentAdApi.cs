@@ -7,16 +7,21 @@ namespace TencentAd
         /// <summary>
         ///     数据上报
         /// </summary>
-        public UserDataApi UserData => new UserDataApi();
+        public UserDataApi UserData => new();
 
         /// <summary>
         ///     授权认证
         /// </summary>
-        public OAuthApi OAuth => new OAuthApi(TencentAdContext.ClientConfig);
+        public OAuthApi OAuth => new(TencentAdContext.ClientConfig);
 
         /// <summary>
         ///     数据洞察
         /// </summary>
-        public AdsInsightApi Insight => new AdsInsightApi();
+        public AdsInsightApi Insight => new();
+
+        /// <summary>
+        ///     人群管理
+        /// </summary>
+        public AdsAudiencesManagementApi AudiencesManagementApi => new();
     }
 }
