@@ -1,10 +1,15 @@
+using Newtonsoft.Json;
 using TencentAd.Model.Common;
 
 namespace TencentAd.Model.AdsInsight
 {
-    public class WechatAdFollowersReq:TencentAdRequest
+    public class WechatAdFollowersReq : TencentAdRequest
     {
-        
+        public WechatAdFollowersReq(TimeRange timeRange)
+        {
+            _timerange = timeRange;
+        }
+
         /// <summary>
         ///     搜索页码，默认值：1 最小值 1，最大值 1000
         /// </summary>
@@ -16,12 +21,12 @@ namespace TencentAd.Model.AdsInsight
 
         public long page_size { get; set; } = 50;
 
-     
+
+        private readonly TimeRange _timerange;
 
         /// <summary>
         ///     时间范围，最多支持查询最近 30 天产生的关注数据；单次查询的最长跨度为 30 天；该时间表示用户关注公众号的时间；
         /// </summary>
-        public TimeRange time_range { get; set; }
-        
+        public string time_range => JsonConvert.SerializeObject(_timerange);
     }
 }
