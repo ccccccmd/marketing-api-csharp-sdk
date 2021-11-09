@@ -20,6 +20,18 @@ namespace TencentAd.Tests
             _api = new TencentAdApi().Insight;
         }
 
+
+        [Fact]
+        public async Task GetAdFollowersTest()
+        {
+            var res = await _api.WechatAdFollowersGet(
+                new WechatAdFollowersReq(
+                    new TimeRange(DateTime.Now.AddMinutes(-3).ToUnixTimeSeconds(), DateTime.Now.ToUnixTimeSeconds()))
+                , AccessToken, null);
+
+            Assert.NotNull(res.page_info);
+        }
+
         [Fact]
         public async Task GetLeadCluesTest()
         {
