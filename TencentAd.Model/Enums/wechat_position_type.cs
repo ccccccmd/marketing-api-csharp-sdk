@@ -74,6 +74,8 @@ namespace TencentAd.Model.Enums
         /// <summary>
         ///    微信其他
         /// </summary>
-        POSITION_TYPE_WECHAT_NULL
+        POSITION_TYPE_WECHAT_NULL,
+
+        UNKNOWN
     }
 }
